@@ -2,14 +2,14 @@ import AnnouncementBar from "@/components/kangi/AnnouncementBar";
 import Navbar from "@/components/kangi/Navbar";
 import Footer from "@/components/kangi/Footer";
 import CategoryGrid from "@/components/kangi/CategoryGrid";
-import { getProductsByCategory } from "@/lib/products";
+import { getProductsByCategory } from "@/lib/mock";
 
 export const metadata = {
-  title: "Women —SOFIA ATELIER",
+  title: "Men —SOFIA ATELIER",
 };
 
-export default function WomenPage() {
-  const products = getProductsByCategory("women");
+export default function MenPage() {
+  const products = getProductsByCategory("men");
 
   return (
     <main style={{ background: "var(--white)", color: "var(--black)" }}>
@@ -25,7 +25,7 @@ export default function WomenPage() {
           className="absolute inset-0 opacity-30"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400&q=80)",
+              "url(https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=1400&q=80)",
             backgroundSize: "cover",
             backgroundPosition: "center 30%",
           }}
@@ -35,13 +35,13 @@ export default function WomenPage() {
             className="font-display text-xs tracking-[0.4em] uppercase mb-2"
             style={{ color: "var(--stone)" }}
           >
-            SOFIA ATELIER / Women
+            SOFIA ATELIER / Men
           </p>
           <h1
             className="font-display text-6xl md:text-8xl tracking-wide leading-none"
             style={{ color: "var(--white)" }}
           >
-            Women
+            Men
           </h1>
         </div>
       </div>
@@ -61,7 +61,7 @@ export default function WomenPage() {
           className="flex gap-6 font-display text-xs tracking-widest uppercase"
           style={{ color: "var(--muted)" }}
         >
-          {["All", "Tops", "Bottoms", "Outerwear", "Bags"].map((f) => (
+          {["All", "Tops", "Bottoms", "Outerwear", "Accessories"].map((f) => (
             <button key={f} className="hover:text-black transition-colors">
               {f}
             </button>

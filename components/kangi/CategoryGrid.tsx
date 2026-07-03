@@ -1,6 +1,6 @@
+import { Product } from "@/sanity/lib/queries";
 import Image from "next/image";
 import Link from "next/link";
-import type { Product } from "@/lib/products";
 
 type Props = {
   products: Product[];
@@ -11,7 +11,7 @@ export default function CategoryGrid({ products }: Props) {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {products.map((p) => (
         <Link
-          key={p.id}
+          key={p._id}
           href={`/product/${p.slug}`}
           className="product-card cursor-pointer group block"
         >

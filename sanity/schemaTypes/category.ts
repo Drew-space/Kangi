@@ -6,34 +6,21 @@ export const categoryType = defineType({
   type: "document",
   fields: [
     defineField({
-      name: "title",
-      title: "Title",
+      name: "name",
+      title: "Name",
       type: "string",
-      description: "e.g. Men, Women, Kids, Accessories, Sale — add as many as you need",
+      description: "e.g. Male, Female, Kids, Accessories",
       validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: "description",
-      title: "Description",
-      type: "text",
-      rows: 2,
-    }),
-    defineField({
-      name: "image",
-      title: "Category Image",
-      type: "image",
-      options: { hotspot: true },
-      description: "Optional — for category cards/banners on the site",
     }),
     defineField({
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "title", maxLength: 96 },
+      options: { source: "name", maxLength: 96 },
       validation: (Rule) => Rule.required(),
     }),
   ],
   preview: {
-    select: { title: "title" },
+    select: { title: "name" },
   },
 });

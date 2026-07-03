@@ -19,12 +19,6 @@ export const productType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "description",
-      title: "Description",
-      type: "text",
-      rows: 4,
-    }),
-    defineField({
       name: "price",
       title: "Price",
       type: "number",
@@ -38,64 +32,52 @@ export const productType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "tag",
+      title: "Tag",
+      description:
+        "Optional badge shown on product cards, e.g. New, Sale, Limited",
+      type: "string",
+      options: {
+        list: ["New", "Sale", "Limited"],
+      },
+    }),
+    defineField({
+      name: "description",
+      title: "Description",
+      type: "text",
+      rows: 4,
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "details",
+      title: "Details",
+      description: "Bullet-point spec list, e.g. fabric, fit, origin",
+      type: "array",
+      of: [{ type: "string" }],
+    }),
+    defineField({
+      name: "sizes",
+      title: "Available Sizes",
+      description: "e.g. XS, S, M, L, XL, XXL, or One Size",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        list: ["One Size", "XXS", "XS", "S", "M", "L", "XL", "XXL"],
+      },
+      validation: (Rule) => Rule.required().min(1),
+    }),
+    defineField({
       name: "images",
       title: "Product Images",
       type: "array",
       of: [{ type: "image", options: { hotspot: true } }],
       validation: (Rule) => Rule.required().min(1),
     }),
-    defineField({
-      name: "sizes",
-      title: "Available Sizes",
-      type: "array",
-      of: [
-        {
-          type: "object",
-          name: "sizeOption",
-          fields: [
-            defineField({
-              name: "size",
-              title: "Size",
-              type: "string",
-              options: {
-                list: ["S", "M", "L", "XL", "XXL"],
-                layout: "radio",
-              },
-              validation: (Rule) => Rule.required(),
-            }),
-            defineField({
-              name: "inStock",
-              title: "In Stock",
-              type: "boolean",
-              initialValue: true,
-            }),
-            defineField({
-              name: "stockCount",
-              title: "Stock Count",
-              type: "number",
-              initialValue: 0,
-            }),
-          ],
-          preview: {
-            select: { title: "size", subtitle: "stockCount" },
-            prepare({ title, subtitle }) {
-              return { title, subtitle: `Stock: ${subtitle ?? 0}` };
-            },
-          },
-        },
-      ],
-    }),
-    defineField({
-      name: "featured",
-      title: "Featured Product",
-      type: "boolean",
-      initialValue: false,
-    }),
   ],
   preview: {
     select: {
       title: "name",
-      subtitle: "category.title",
+      subtitle: "category.name",
       media: "images.0",
     },
   },

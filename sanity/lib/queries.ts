@@ -1,29 +1,22 @@
 import { client } from "./client";
 
-export interface SizeOption {
-  size: "S" | "M" | "L" | "XL" | "XXL";
-  inStock: boolean;
-  stockCount: number;
-}
-
 export interface Product {
   _id: string;
-  name: string;
   slug: string;
-  description: string;
+  name: string;
   price: number;
-  category: string;
+  category: "men" | "women" | string;
+  tag?: string;
+  description: string;
+  details: string[];
+  sizes: string[];
   images: string[]; // resolved to URLs
-  sizes: SizeOption[];
-  featured: boolean;
 }
 
 export interface Category {
   _id: string;
-  title: string;
+  name: string;
   slug: string;
-  description?: string;
-  image?: string;
 }
 
 export interface SiteSettings {
@@ -33,72 +26,39 @@ export interface SiteSettings {
   twitter?: string;
 }
 
+const productFields = /* groq */ `
+  _id,
+  name,
+  "slug": slug.current,
+  price,
+  "category": category->slug.current,
+  tag,
+  description,
+  details,
+  sizes,
+  "images": images[].asset->url
+`;
+
 // All products, newest first
 const allProductsQuery = /* groq */ `
-  *[_type == "product"] | order(_createdAt desc) {
-    _id,
-    name,
-    "slug": slug.current,
-    description,
-    price,
-    "category": category->title,
-    "images": images[].asset->url,
-    sizes,
-    featured
-  }
+  *[_type == "product"] | order(_createdAt desc) { ${productFields} }
 `;
 
 // Single product by slug — for product detail pages
 const productBySlugQuery = /* groq */ `
-  *[_type == "product" && slug.current == $slug][0] {
-    _id,
-    name,
-    "slug": slug.current,
-    description,
-    price,
-    "category": category->title,
-    "images": images[].asset->url,
-    sizes,
-    featured
-  }
+  *[_type == "product" && slug.current == $slug][0] { ${productFields} }
 `;
 
-// Products filtered by category ("Men" | "Women")
+// Products filtered by category slug ("men" | "women")
 const productsByCategoryQuery = /* groq */ `
-  *[_type == "product" && category->title == $category] | order(_createdAt desc) {
-    _id,
-    name,
-    "slug": slug.current,
-    description,
-    price,
-    "category": category->title,
-    "images": images[].asset->url,
-    sizes,
-    featured
-  }
-`;
-
-const featuredProductsQuery = /* groq */ `
-  *[_type == "product" && featured == true] | order(_createdAt desc) {
-    _id,
-    name,
-    "slug": slug.current,
-    description,
-    price,
-    "category": category->title,
-    "images": images[].asset->url,
-    sizes,
-    featured
-  }
+  *[_type == "product" && category->slug.current == $category] | order(_createdAt desc) { ${productFields} }
 `;
 
 const allCategoriesQuery = /* groq */ `
-  *[_type == "category"] | order(title asc) {
+  *[_type == "category"] | order(name asc) {
     _id,
-    title,
-    "slug": slug.current,
-    description,
-    "image": image.asset->url
+    name,
+    "slug": slug.current
   }
 `;
 
@@ -115,18 +75,16 @@ export async function getAllProducts(): Promise<Product[]> {
   return client.fetch(allProductsQuery);
 }
 
+// Drop-in replacement for the old lib/products.ts getProductBySlug
 export async function getProductBySlug(slug: string): Promise<Product | null> {
   return client.fetch(productBySlugQuery, { slug });
 }
 
+// Drop-in replacement for the old lib/products.ts getProductsByCategory
 export async function getProductsByCategory(
-  category: string
+  category: "men" | "women" | string,
 ): Promise<Product[]> {
   return client.fetch(productsByCategoryQuery, { category });
-}
-
-export async function getFeaturedProducts(): Promise<Product[]> {
-  return client.fetch(featuredProductsQuery);
 }
 
 export async function getAllCategories(): Promise<Category[]> {

@@ -1,4 +1,4 @@
-export type Product = {
+export type hello = {
   id: string;
   slug: string;
   name: string;
@@ -11,7 +11,7 @@ export type Product = {
   images: string[];
 };
 
-export const PRODUCTS: Product[] = [
+export const wow: hello[] = [
   // ── MEN ──
   {
     id: "m1",
@@ -285,10 +285,10 @@ export const PRODUCTS: Product[] = [
   },
 ];
 
-export function getProductBySlug(slug: string) {
-  return PRODUCTS.find((p) => p.slug === slug) ?? null;
+export function blast(slug: string) {
+  return wow.find((p) => p.slug === slug) ?? null;
 }
 
-export function getProductsByCategory(category: "men" | "women") {
-  return PRODUCTS.filter((p) => p.category === category);
+export function fuck(category: "men" | "women") {
+  return wow.filter((p) => p.category === category);
 }
