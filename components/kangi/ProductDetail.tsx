@@ -114,7 +114,7 @@ export default function ProductDetail({ product }: Props) {
             {product.name}
           </h1>
           <p className="font-display text-2xl tracking-widest mb-8">
-            ₦{product.price.toLocaleString()}
+            ${product.price.toLocaleString()}
           </p>
 
           <p
@@ -191,7 +191,7 @@ export default function ProductDetail({ product }: Props) {
           {/* Direct WhatsApp buy */}
           <a
             href={`https://wa.me/2347061673695?text=${encodeURIComponent(
-              `Hi! I'd like to order:\n• ${product.name}\n• Size: ${selectedSize || "[Please specify size]"}\n• Price: ₦${product.price.toLocaleString()}\n\nPlease confirm availability. Thank you!`,
+              `Hi! I'd like to order:\n• ${product.name}\n• Size: ${selectedSize || "[Please specify size]"}\n• Price: $${product.price.toLocaleString()}\n\nPlease confirm availability. Thank you!`,
             )}`}
             target="_blank"
             rel="noopener noreferrer"

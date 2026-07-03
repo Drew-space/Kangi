@@ -22,7 +22,11 @@ export default function ProductsGrid() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {FEATURED.map((p) => (
-          <Link key={p.id} href={`/product/${p.slug}`} className="product-card cursor-pointer group block">
+          <Link
+            key={p.id}
+            href={`/product/${p.slug}`}
+            className="product-card cursor-pointer group block"
+          >
             <div className="relative h-[65vh] overflow-hidden bg-gray-100">
               {p.tag && (
                 <span
@@ -57,7 +61,7 @@ export default function ProductsGrid() {
                 className="font-display tracking-widest text-sm"
                 style={{ color: "var(--muted)" }}
               >
-                ₦{p.price.toLocaleString()}
+                ${p.price.toLocaleString()}
               </p>
             </div>
           </Link>

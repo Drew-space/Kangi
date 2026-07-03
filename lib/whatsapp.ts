@@ -11,7 +11,7 @@ export type CartItem = {
 export function buildWhatsAppURL(items: CartItem[]): string {
   const lines = items.map(
     (item) =>
-      `• ${item.name} | Size: ${item.size} | Qty: ${item.quantity} | ₦${(item.price * item.quantity).toLocaleString()}`,
+      `• ${item.name} | Size: ${item.size} | Qty: ${item.quantity} | $${(item.price * item.quantity).toLocaleString()}`,
   );
 
   const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
@@ -21,7 +21,7 @@ export function buildWhatsAppURL(items: CartItem[]): string {
     "",
     ...lines,
     "",
-    `Total: ₦${total.toLocaleString()}`,
+    `Total: $${total.toLocaleString()}`,
     "",
     "Please confirm availability and shipping details. Thank you.",
   ].join("\n");
