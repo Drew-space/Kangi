@@ -18,7 +18,7 @@
 //           className="font-display text-[10vw] md:text-[7vw] leading-none tracking-wider"
 //           style={{ color: "var(--white)" }}
 //         >
-//           KĀNGI
+//          SOFIA ATELIER
 //         </h2>
 //         <p className="text-white/60 tracking-[0.3em] uppercase text-xs mt-4 mb-8">
 //           Explore Collection
@@ -57,7 +57,7 @@ export default function StatementSection() {
           className="font-display text-[10vw] md:text-[7vw] leading-none tracking-wider"
           style={{ color: "var(--white)" }}
         >
-          KĀNGI
+          SOFIA ATELIER
         </h2>
         <p className="text-white/60 tracking-[0.3em] uppercase text-xs mt-4 mb-8">
           Explore Collection

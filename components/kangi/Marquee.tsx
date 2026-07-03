@@ -11,7 +11,8 @@ export default function Marquee() {
             className="font-display text-4xl tracking-widest px-10"
             style={{ color: "var(--stone)" }}
           >
-            NEW ARRIVALS &nbsp;·&nbsp; AW25 &nbsp;·&nbsp; KĀNGI &nbsp;·&nbsp;
+            NEW ARRIVALS &nbsp;·&nbsp; AW25 &nbsp;·&nbsp;SOFIA ATELIER
+            &nbsp;·&nbsp;
           </span>
         ))}
       </div>

@@ -27,7 +27,8 @@ export default function Hero() {
             textShadow: "0 0 80px rgba(255,255,255,0.3)",
           }}
         >
-          KĀNGI
+          SOFIA ATELIER
+          {/*SOFIA ATELIER */}
         </h1>
         <p className="text-white/70 tracking-[0.35em] uppercase text-xs md:text-sm mt-4 fade-up fade-up-delay-2">
           Autumn / Winter 2025
@@ -74,7 +75,7 @@ export default function Hero() {
 //             textShadow: "0 0 80px rgba(255,255,255,0.3)",
 //           }}
 //         >
-//           KĀNGI
+//          SOFIA ATELIER
 //         </h1>
 //         <p className="text-white/70 tracking-[0.35em] uppercase text-xs md:text-sm mt-4 fade-up fade-up-delay-2">
 //           Autumn / Winter 2025

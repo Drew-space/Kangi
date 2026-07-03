@@ -15,7 +15,7 @@ export default function OfferStrip() {
         />
         <div className="absolute bottom-8 left-8">
           <p className="font-display text-white text-lg tracking-wide">
-            Kāngi T-Shirt
+            {/*SOFIA ATELIER T-Shirt */}SOFIA ATELIER T-Shirt
           </p>
           <p className="text-white/70 font-display tracking-widest">$1,900</p>
         </div>
@@ -46,7 +46,7 @@ export default function OfferStrip() {
               className="font-display text-[10px] tracking-[0.35em] uppercase mb-2"
               style={{ color: "var(--stone)" }}
             >
-              KĀNGI · Offers
+              {/*SOFIA ATELIER · Offers */} SOFIA ATELIER · Offers
             </p>
             <h3
               className="font-display text-3xl leading-tight mb-6"

@@ -35,10 +35,18 @@ export default function ProductDetail({ product }: Props) {
   return (
     <section className="px-6 md:px-12 py-10 md:py-16">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 font-display text-[11px] tracking-widest uppercase mb-10" style={{ color: "var(--muted)" }}>
-        <Link href="/" className="hover:text-black transition-colors">Home</Link>
+      <nav
+        className="flex items-center gap-2 font-display text-[11px] tracking-widest uppercase mb-10"
+        style={{ color: "var(--muted)" }}
+      >
+        <Link href="/" className="hover:text-black transition-colors">
+          Home
+        </Link>
         <span>/</span>
-        <Link href={`/${product.category}`} className="hover:text-black transition-colors capitalize">
+        <Link
+          href={`/${product.category}`}
+          className="hover:text-black transition-colors capitalize"
+        >
           {product.category}
         </Link>
         <span>/</span>
@@ -57,7 +65,8 @@ export default function ProductDetail({ product }: Props) {
                 className="relative w-16 h-20 overflow-hidden flex-shrink-0 transition-opacity"
                 style={{
                   opacity: selectedImage === i ? 1 : 0.45,
-                  outline: selectedImage === i ? `1.5px solid var(--black)` : "none",
+                  outline:
+                    selectedImage === i ? `1.5px solid var(--black)` : "none",
                   outlineOffset: "2px",
                 }}
               >
@@ -95,8 +104,11 @@ export default function ProductDetail({ product }: Props) {
 
         {/* ── Info ── */}
         <div className="flex flex-col justify-start pt-2">
-          <p className="font-display text-xs tracking-[0.35em] uppercase mb-3" style={{ color: "var(--muted)" }}>
-            Kāngi / {product.category}
+          <p
+            className="font-display text-xs tracking-[0.35em] uppercase mb-3"
+            style={{ color: "var(--muted)" }}
+          >
+            SOFIA ATELIER / {product.category}
           </p>
           <h1 className="font-display text-4xl md:text-5xl tracking-wide leading-tight mb-4">
             {product.name}
@@ -105,7 +117,10 @@ export default function ProductDetail({ product }: Props) {
             ₦{product.price.toLocaleString()}
           </p>
 
-          <p className="text-sm leading-relaxed tracking-wide mb-8" style={{ color: "var(--muted)" }}>
+          <p
+            className="text-sm leading-relaxed tracking-wide mb-8"
+            style={{ color: "var(--muted)" }}
+          >
             {product.description}
           </p>
 
@@ -113,9 +128,17 @@ export default function ProductDetail({ product }: Props) {
           <div className="mb-6">
             <div className="flex items-center justify-between mb-3">
               <span className="font-display text-xs tracking-widest uppercase">
-                Size {selectedSize && <span style={{ color: "var(--stone)" }}>— {selectedSize}</span>}
+                Size{" "}
+                {selectedSize && (
+                  <span style={{ color: "var(--stone)" }}>
+                    — {selectedSize}
+                  </span>
+                )}
               </span>
-              <button className="font-display text-[10px] tracking-widest uppercase underline underline-offset-4" style={{ color: "var(--muted)" }}>
+              <button
+                className="font-display text-[10px] tracking-widest uppercase underline underline-offset-4"
+                style={{ color: "var(--muted)" }}
+              >
                 Size Guide
               </button>
             </div>
@@ -123,12 +146,20 @@ export default function ProductDetail({ product }: Props) {
               {product.sizes.map((size) => (
                 <button
                   key={size}
-                  onClick={() => { setSelectedSize(size); setSizeError(false); }}
+                  onClick={() => {
+                    setSelectedSize(size);
+                    setSizeError(false);
+                  }}
                   className="font-display text-xs tracking-widest uppercase px-4 py-2.5 border transition-all duration-200"
                   style={{
-                    background: selectedSize === size ? "var(--black)" : "transparent",
-                    color: selectedSize === size ? "var(--white)" : "var(--black)",
-                    borderColor: selectedSize === size ? "var(--black)" : "rgba(0,0,0,0.2)",
+                    background:
+                      selectedSize === size ? "var(--black)" : "transparent",
+                    color:
+                      selectedSize === size ? "var(--white)" : "var(--black)",
+                    borderColor:
+                      selectedSize === size
+                        ? "var(--black)"
+                        : "rgba(0,0,0,0.2)",
                   }}
                 >
                   {size}
@@ -136,7 +167,10 @@ export default function ProductDetail({ product }: Props) {
               ))}
             </div>
             {sizeError && (
-              <p className="font-display text-[11px] tracking-widest uppercase mt-2" style={{ color: "#c0392b" }}>
+              <p
+                className="font-display text-[11px] tracking-widest uppercase mt-2"
+                style={{ color: "#c0392b" }}
+              >
                 Please select a size
               </p>
             )}
@@ -157,7 +191,7 @@ export default function ProductDetail({ product }: Props) {
           {/* Direct WhatsApp buy */}
           <a
             href={`https://wa.me/2347061673695?text=${encodeURIComponent(
-              `Hi! I'd like to order:\n• ${product.name}\n• Size: ${selectedSize || "[Please specify size]"}\n• Price: ₦${product.price.toLocaleString()}\n\nPlease confirm availability. Thank you!`
+              `Hi! I'd like to order:\n• ${product.name}\n• Size: ${selectedSize || "[Please specify size]"}\n• Price: ₦${product.price.toLocaleString()}\n\nPlease confirm availability. Thank you!`,
             )}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -171,12 +205,24 @@ export default function ProductDetail({ product }: Props) {
           </a>
 
           {/* Product details accordion */}
-          <div className="border-t pt-6 space-y-2" style={{ borderColor: "rgba(0,0,0,0.1)" }}>
-            <p className="font-display text-xs tracking-widest uppercase mb-4">Product Details</p>
+          <div
+            className="border-t pt-6 space-y-2"
+            style={{ borderColor: "rgba(0,0,0,0.1)" }}
+          >
+            <p className="font-display text-xs tracking-widest uppercase mb-4">
+              Product Details
+            </p>
             <ul className="space-y-2">
               {product.details.map((d) => (
-                <li key={d} className="flex items-start gap-3 text-sm tracking-wide" style={{ color: "var(--muted)" }}>
-                  <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0" style={{ background: "var(--stone)" }} />
+                <li
+                  key={d}
+                  className="flex items-start gap-3 text-sm tracking-wide"
+                  style={{ color: "var(--muted)" }}
+                >
+                  <span
+                    className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0"
+                    style={{ background: "var(--stone)" }}
+                  />
                   {d}
                 </li>
               ))}
@@ -186,14 +232,30 @@ export default function ProductDetail({ product }: Props) {
           {/* Shipping note */}
           <div
             className="mt-8 p-4 border flex items-start gap-3"
-            style={{ borderColor: "rgba(0,0,0,0.1)", background: "rgba(200,184,154,0.08)" }}
+            style={{
+              borderColor: "rgba(0,0,0,0.1)",
+              background: "rgba(200,184,154,0.08)",
+            }}
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="mt-0.5 flex-shrink-0" style={{ color: "var(--stone)" }}>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              className="mt-0.5 flex-shrink-0"
+              style={{ color: "var(--stone)" }}
+            >
               <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" />
               <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
             </svg>
-            <p className="text-[11px] tracking-wide leading-relaxed" style={{ color: "var(--muted)" }}>
-              Orders are confirmed via WhatsApp. Shipping details and timelines will be communicated after order confirmation.
+            <p
+              className="text-[11px] tracking-wide leading-relaxed"
+              style={{ color: "var(--muted)" }}
+            >
+              Orders are confirmed via WhatsApp. Shipping details and timelines
+              will be communicated after order confirmation.
             </p>
           </div>
         </div>

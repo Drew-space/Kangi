@@ -5,7 +5,7 @@ import CategoryGrid from "@/components/kangi/CategoryGrid";
 import { getProductsByCategory } from "@/lib/products";
 
 export const metadata = {
-  title: "Men — KĀNGI",
+  title: "Men —SOFIA ATELIER",
 };
 
 export default function MenPage() {
@@ -35,7 +35,7 @@ export default function MenPage() {
             className="font-display text-xs tracking-[0.4em] uppercase mb-2"
             style={{ color: "var(--stone)" }}
           >
-            Kāngi / Men
+            SOFIA ATELIER / Men
           </p>
           <h1
             className="font-display text-6xl md:text-8xl tracking-wide leading-none"
@@ -51,15 +51,18 @@ export default function MenPage() {
         className="px-6 md:px-12 py-5 flex items-center justify-between border-b"
         style={{ borderColor: "rgba(0,0,0,0.1)" }}
       >
-        <p className="font-display text-xs tracking-widest uppercase" style={{ color: "var(--muted)" }}>
+        <p
+          className="font-display text-xs tracking-widest uppercase"
+          style={{ color: "var(--muted)" }}
+        >
           {products.length} Products
         </p>
-        <div className="flex gap-6 font-display text-xs tracking-widest uppercase" style={{ color: "var(--muted)" }}>
+        <div
+          className="flex gap-6 font-display text-xs tracking-widest uppercase"
+          style={{ color: "var(--muted)" }}
+        >
           {["All", "Tops", "Bottoms", "Outerwear", "Accessories"].map((f) => (
-            <button
-              key={f}
-              className="hover:text-black transition-colors"
-            >
+            <button key={f} className="hover:text-black transition-colors">
               {f}
             </button>
           ))}

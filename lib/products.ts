@@ -21,7 +21,7 @@ export const PRODUCTS: Product[] = [
     category: "men",
     tag: "New",
     description:
-      "A relaxed silhouette cut from 100% heavyweight cotton. Dropped shoulders, raw-hem finish, and tonal Kāngi embroidery at the chest.",
+      "A relaxed silhouette cut from 100% heavyweight cotton. Dropped shoulders, raw-hem finish, and tonalSOFIA ATELIER embroidery at the chest.",
     details: [
       "100% 320gsm heavyweight cotton",
       "Dropped shoulder construction",
@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
     price: 2400,
     category: "men",
     description:
-      "Relaxed-fit longsleeve in brushed cotton jersey. A clean, everyday essential with subtle Kāngi branding.",
+      "Relaxed-fit longsleeve in brushed cotton jersey. A clean, everyday essential with subtleSOFIA ATELIER branding.",
     details: [
       "280gsm brushed cotton jersey",
       "Relaxed fit",
@@ -110,7 +110,7 @@ export const PRODUCTS: Product[] = [
     price: 1200,
     category: "men",
     description:
-      "Structured five-panel cap in washed canvas. Embroidered Kāngi wordmark at front.",
+      "Structured five-panel cap in washed canvas. EmbroideredSOFIA ATELIER wordmark at front.",
     details: [
       "Washed cotton canvas",
       "Structured front panel",

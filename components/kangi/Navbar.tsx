@@ -36,14 +36,12 @@ export default function Navbar() {
           href="/"
           className="font-display text-2xl tracking-widest absolute left-1/2 -translate-x-1/2"
         >
-          KĀNGI
+          SOFIA ATELIER
         </Link>
 
         <div className="flex items-center gap-4 text-[11px] tracking-widest uppercase font-display">
           <button>Search</button>
-          <button onClick={openCart}>
-            Bag ({totalCount})
-          </button>
+          <button onClick={openCart}>Bag ({totalCount})</button>
         </div>
       </nav>
 

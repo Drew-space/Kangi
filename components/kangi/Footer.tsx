@@ -1,7 +1,13 @@
 const FOOTER_COLS = [
   {
     title: "Help",
-    links: ["Contact Us", "My Order", "Size Guide", "Track Shipment", "Sitemap"],
+    links: [
+      "Contact Us",
+      "My Order",
+      "Size Guide",
+      "Track Shipment",
+      "Sitemap",
+    ],
   },
   {
     title: "Info",
@@ -33,7 +39,7 @@ export default function Footer() {
             className="font-display text-3xl tracking-widest"
             style={{ color: "var(--white)" }}
           >
-            KĀNGI
+            SOFIA ATELIER
           </span>
           <p className="text-white/40 text-xs tracking-wide mt-3 max-w-xs leading-relaxed">
             Elevated streetwear for the modern individual. Premium materials,
@@ -97,7 +103,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] tracking-wider text-white/30">
-        <span>© 2025 KĀNGI. All rights reserved.</span>
+        <span>© 2025SOFIA ATELIER. All rights reserved.</span>
         <div className="flex gap-6">
           {["Instagram", "TikTok", "Pinterest"].map((s) => (
             <a

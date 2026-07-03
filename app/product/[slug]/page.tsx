@@ -16,7 +16,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
-  return { title: product ? `${product.name} — KĀNGI` : "KĀNGI" };
+  return { title: product ? `${product.name} —SOFIA ATELIER` : "KĀNGI" };
 }
 
 export default async function ProductPage({
