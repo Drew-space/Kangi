@@ -4,7 +4,7 @@ import Navbar from "@/components/kangi/Navbar";
 import Footer from "@/components/kangi/Footer";
 
 export const metadata = {
-  title: "About — KĀNGI",
+  title: "About —SOFIA ATELIER",
 };
 
 export default function AboutPage() {
@@ -25,10 +25,16 @@ export default function AboutPage() {
         />
         <div
           className="absolute inset-0"
-          style={{ background: "linear-gradient(to bottom, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.75) 100%)" }}
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.75) 100%)",
+          }}
         />
         <div className="relative z-10 max-w-2xl">
-          <p className="font-display text-xs tracking-[0.4em] uppercase mb-4" style={{ color: "var(--stone)" }}>
+          <p
+            className="font-display text-xs tracking-[0.4em] uppercase mb-4"
+            style={{ color: "var(--stone)" }}
+          >
             Our Story
           </p>
           <h1
@@ -38,7 +44,8 @@ export default function AboutPage() {
             Built on Restraint.
           </h1>
           <p className="text-white/60 text-sm md:text-base tracking-wide leading-relaxed max-w-lg">
-            KĀNGI was founded on the belief that less — done precisely — is everything.
+            SOFIA ATELIER was founded on the belief that less — done precisely —
+            is everything.
           </p>
         </div>
       </section>
@@ -54,12 +61,20 @@ export default function AboutPage() {
         <h2 className="font-display text-4xl md:text-6xl leading-tight tracking-wide mb-12">
           We don't follow trends. We make the case for permanence.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm leading-relaxed tracking-wide" style={{ color: "var(--muted)" }}>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm leading-relaxed tracking-wide"
+          style={{ color: "var(--muted)" }}
+        >
           <p>
-            KĀNGI is a streetwear label rooted in the idea that clothing should last — in construction, in style, and in meaning. We source only from factories that share our obsession with craft. Every fabric is handled, every seam is questioned.
+            SOFIA ATELIER is a streetwear label rooted in the idea that clothing
+            should last — in construction, in style, and in meaning. We source
+            only from factories that share our obsession with craft. Every
+            fabric is handled, every seam is questioned.
           </p>
           <p>
-            We believe the most powerful statement is a garment that needs no explanation. No logos for their own sake. No noise. Just material, cut, and intention — executed without compromise.
+            We believe the most powerful statement is a garment that needs no
+            explanation. No logos for their own sake. No noise. Just material,
+            cut, and intention — executed without compromise.
           </p>
         </div>
       </section>
@@ -79,7 +94,10 @@ export default function AboutPage() {
           className="flex flex-col justify-center px-10 md:px-16 py-20"
           style={{ background: "var(--charcoal)" }}
         >
-          <p className="font-display text-xs tracking-[0.4em] uppercase mb-6" style={{ color: "var(--stone)" }}>
+          <p
+            className="font-display text-xs tracking-[0.4em] uppercase mb-6"
+            style={{ color: "var(--stone)" }}
+          >
             By the numbers
           </p>
           {[
@@ -88,11 +106,21 @@ export default function AboutPage() {
             { stat: "100%", label: "Natural & Recycled Fabrics" },
             { stat: "0", label: "Fast Fashion. Ever." },
           ].map(({ stat, label }) => (
-            <div key={label} className="border-b py-5 flex justify-between items-center" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
-              <span className="font-display text-4xl tracking-wide" style={{ color: "var(--white)" }}>
+            <div
+              key={label}
+              className="border-b py-5 flex justify-between items-center"
+              style={{ borderColor: "rgba(255,255,255,0.08)" }}
+            >
+              <span
+                className="font-display text-4xl tracking-wide"
+                style={{ color: "var(--white)" }}
+              >
                 {stat}
               </span>
-              <span className="font-display text-xs tracking-widest uppercase" style={{ color: "var(--stone)" }}>
+              <span
+                className="font-display text-xs tracking-widest uppercase"
+                style={{ color: "var(--stone)" }}
+              >
                 {label}
               </span>
             </div>
@@ -102,7 +130,10 @@ export default function AboutPage() {
 
       {/* ── VALUES GRID ── */}
       <section className="px-6 md:px-16 py-24">
-        <p className="font-display text-xs tracking-[0.4em] uppercase mb-12 text-center" style={{ color: "var(--stone)" }}>
+        <p
+          className="font-display text-xs tracking-[0.4em] uppercase mb-12 text-center"
+          style={{ color: "var(--stone)" }}
+        >
           What We Stand For
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -133,8 +164,13 @@ export default function AboutPage() {
                   style={{ objectPosition: "center top" }}
                 />
               </div>
-              <p className="font-display text-2xl tracking-wide mb-3">{title}</p>
-              <p className="text-sm leading-relaxed tracking-wide" style={{ color: "var(--muted)" }}>
+              <p className="font-display text-2xl tracking-wide mb-3">
+                {title}
+              </p>
+              <p
+                className="text-sm leading-relaxed tracking-wide"
+                style={{ color: "var(--muted)" }}
+              >
                 {body}
               </p>
             </div>
@@ -159,25 +195,48 @@ export default function AboutPage() {
             className="font-display text-3xl md:text-5xl leading-tight tracking-wide mb-6"
             style={{ color: "var(--white)" }}
           >
-            "The best clothing is the kind you stop thinking about — it simply becomes part of you."
+            "The best clothing is the kind you stop thinking about — it simply
+            becomes part of you."
           </p>
-          <cite className="font-display text-xs tracking-[0.4em] uppercase not-italic" style={{ color: "var(--stone)" }}>
-            — Kāngi Creative Direction
+          <cite
+            className="font-display text-xs tracking-[0.4em] uppercase not-italic"
+            style={{ color: "var(--stone)" }}
+          >
+            —SOFIA ATELIER Creative Direction
           </cite>
         </blockquote>
       </section>
 
       {/* ── TEAM ── */}
       <section className="px-6 md:px-16 py-24">
-        <p className="font-display text-xs tracking-[0.4em] uppercase mb-12" style={{ color: "var(--stone)" }}>
+        <p
+          className="font-display text-xs tracking-[0.4em] uppercase mb-12"
+          style={{ color: "var(--stone)" }}
+        >
           The People
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { name: "Adaeze Obi", role: "Founder & Creative Director", img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80" },
-            { name: "Kofi Mensah", role: "Head of Design", img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&q=80" },
-            { name: "Yemi Alade", role: "Production Director", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" },
-            { name: "Temi Cole", role: "Brand & Communications", img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&q=80" },
+            {
+              name: "Adaeze Obi",
+              role: "Founder & Creative Director",
+              img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80",
+            },
+            {
+              name: "Kofi Mensah",
+              role: "Head of Design",
+              img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&q=80",
+            },
+            {
+              name: "Yemi Alade",
+              role: "Production Director",
+              img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
+            },
+            {
+              name: "Temi Cole",
+              role: "Brand & Communications",
+              img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&q=80",
+            },
           ].map(({ name, role, img }) => (
             <div key={name}>
               <div className="relative h-64 md:h-80 overflow-hidden mb-4 bg-gray-100">
@@ -186,11 +245,17 @@ export default function AboutPage() {
                   alt={name}
                   fill
                   className="object-cover"
-                  style={{ objectPosition: "center top", filter: "grayscale(30%)" }}
+                  style={{
+                    objectPosition: "center top",
+                    filter: "grayscale(30%)",
+                  }}
                 />
               </div>
               <p className="font-display tracking-wide text-sm">{name}</p>
-              <p className="font-display text-[11px] tracking-widest uppercase mt-1" style={{ color: "var(--muted)" }}>
+              <p
+                className="font-display text-[11px] tracking-widest uppercase mt-1"
+                style={{ color: "var(--muted)" }}
+              >
                 {role}
               </p>
             </div>
@@ -207,7 +272,10 @@ export default function AboutPage() {
           <h3 className="font-display text-4xl md:text-5xl tracking-wide mb-3">
             Explore the Collection
           </h3>
-          <p className="text-sm tracking-wide" style={{ color: "var(--muted)" }}>
+          <p
+            className="text-sm tracking-wide"
+            style={{ color: "var(--muted)" }}
+          >
             Clothing made to last. Worn for a lifetime.
           </p>
         </div>

@@ -20,7 +20,7 @@ export default function Hero() {
         }}
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <h1
+        {/* <h1
           className="font-display text-[18vw] md:text-[14vw] leading-none tracking-wider text-white/90 fade-up fade-up-delay-1"
           style={{
             mixBlendMode: "overlay",
@@ -28,7 +28,16 @@ export default function Hero() {
           }}
         >
           SOFIA ATELIER
-          {/*SOFIA ATELIER */}
+        
+        </h1> */}
+        <h1
+          className="font-display text-center px-4 text-[13vw] sm:text-[10vw] md:text-[7vw] leading-[0.95] tracking-wider text-white/90 fade-up fade-up-delay-1"
+          style={{
+            mixBlendMode: "overlay",
+            textShadow: "0 0 80px rgba(255,255,255,0.3)",
+          }}
+        >
+          SOFIA ATELIER
         </h1>
         <p className="text-white/70 tracking-[0.35em] uppercase text-xs md:text-sm mt-4 fade-up fade-up-delay-2">
           Autumn / Winter 2025
