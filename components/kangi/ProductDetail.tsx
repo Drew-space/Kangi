@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/lib/products";
 import { useCart } from "@/context/CartContext";
-
+import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
 type Props = { product: Product };
 
 export default function ProductDetail({ product }: Props) {
@@ -190,7 +190,7 @@ export default function ProductDetail({ product }: Props) {
 
           {/* Direct WhatsApp buy */}
           <a
-            href={`https://wa.me/15077032720?text=${encodeURIComponent(
+            href={`https://wa.me/${WHATSAPP_NUMBER.replace("+", "")}?text=${encodeURIComponent(
               `Hi! I'd like to order:\n• ${product.name}\n• Size: ${selectedSize || "[Please specify size]"}\n• Price: $${product.price.toLocaleString()}\n\nPlease confirm availability. Thank you!`,
             )}`}
             target="_blank"

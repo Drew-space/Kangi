@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "+15077032720"; // +1 507 703 2720
+export const WHATSAPP_NUMBER = "+15077032720"; // +1 507 703 2720
 
 export type CartItem = {
   id: string;
