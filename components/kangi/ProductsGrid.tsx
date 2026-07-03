@@ -86,7 +86,7 @@ export default async function ProductsGrid() {
         </h2>
 
         <a
-          href="/men"
+          href="/women"
           className="font-display text-xs tracking-widest uppercase underline underline-offset-4"
           style={{ color: "var(--muted)" }}
         >
