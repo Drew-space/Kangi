@@ -4,7 +4,8 @@ export default function NewsletterBand() {
   return (
     <section className="relative h-[55vh] overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=80"
+        src="/images/offer.png"
+        // src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=80"
         alt="Newsletter band"
         fill
         className="object-cover"

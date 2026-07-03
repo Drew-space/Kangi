@@ -5,7 +5,8 @@ export default function EditorialGrid() {
     <section className="grid grid-cols-1 md:grid-cols-2">
       <div className="relative h-[70vh] overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=900&q=80"
+          src="/images/left.png"
+          // src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=900&q=80"
           alt="Cap editorial"
           fill
           className="object-cover product-img"
@@ -23,7 +24,8 @@ export default function EditorialGrid() {
 
       <div className="relative h-[70vh] overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=900&q=80"
+          src="/images/right.png"
+          // src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=900&q=80"
           alt="Model editorial"
           fill
           className="object-cover product-img"

@@ -6,7 +6,8 @@ export default function OfferStrip() {
       {/* Feature product */}
       <div className="relative h-[80vh] overflow-hidden product-card">
         <Image
-          src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80"
+          src="/images/wing-1.png"
+          // src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80"
           alt="Feature product"
           fill
           className="object-cover product-img"
@@ -23,7 +24,8 @@ export default function OfferStrip() {
       {/* Offer card */}
       <div className="relative h-[80vh] overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=800&q=80"
+          src="/images/wing-2.png"
+          // src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=800&q=80"
           alt="Exclusive offers"
           fill
           className="object-cover"
