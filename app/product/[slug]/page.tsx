@@ -45,6 +45,8 @@ import Navbar from "@/components/kangi/Navbar";
 import Footer from "@/components/kangi/Footer";
 import ProductDetail from "@/components/kangi/ProductDetail";
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const products = await getAllProducts();
   return products.map((p) => ({ slug: p.slug }));

@@ -40,9 +40,8 @@ export default function Hero() {
         >
           SOFIA ATELIER
         </h1>
-        <p className="text-white/70 tracking-[0.35em] uppercase text-xs md:text-sm mt-4 fade-up fade-up-delay-2">
-          {/* Autumn / Winter 2025 */}The Signature Collection / Exclusive
-          Pieces {currentYear}
+        <p className="text-white/70 tracking-[0.2em] sm:tracking-[0.35em] uppercase text-[10px] sm:text-xs md:text-sm mt-4 text-center px-6 max-w-xs sm:max-w-none fade-up fade-up-delay-2">
+          The Signature Collection / Exclusive Pieces {currentYear}
         </p>
         <a
           href="#products"

@@ -5,6 +5,8 @@ import Footer from "@/components/kangi/Footer";
 import CategoryGrid from "@/components/kangi/CategoryGrid";
 import { getAllCategories, getProductsByCategory } from "@/sanity/lib/queries";
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const categories = await getAllCategories();
   return categories.map((c) => ({ category: c.slug }));

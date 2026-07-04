@@ -134,6 +134,7 @@ import {
   RiGlobalLine,
 } from "@remixicon/react";
 import { getSiteSettings } from "@/sanity/lib/queries";
+const currentYear = new Date().getFullYear();
 import type { RemixiconComponentType } from "@remixicon/react";
 const FOOTER_COLS = [
   {
@@ -212,7 +213,7 @@ export default async function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] tracking-wider text-white/30">
-        <span>© 2025 SOFIA ATELIER. All rights reserved.</span>
+        <span>© {currentYear} SOFIA ATELIER. All rights reserved.</span>
 
         <div className="flex items-center gap-5">
           {settings?.email && (
