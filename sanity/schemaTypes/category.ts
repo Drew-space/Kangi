@@ -19,6 +19,13 @@ export const categoryType = defineType({
       options: { source: "name", maxLength: 96 },
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: "headerImage",
+      title: "Header Image",
+      description: "Banner shown at the top of this category's page",
+      type: "image",
+      options: { hotspot: true },
+    }),
   ],
   preview: {
     select: { title: "name" },

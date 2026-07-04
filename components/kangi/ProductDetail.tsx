@@ -191,7 +191,7 @@ export default function ProductDetail({ product }: Props) {
           {/* Direct WhatsApp buy */}
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER.replace("+", "")}?text=${encodeURIComponent(
-              `Hi! I'd like to order:\n• ${product.name}\n• Size: ${selectedSize || "[Please specify size]"}\n• Price: $${product.price.toLocaleString()}\n\nPlease confirm availability. Thank you!`,
+              `Hi! I'd like to order:\n• ${product.name}\n• Size: ${selectedSize || "[Please specify size]"}\n• Price: $${product.price.toLocaleString()}\n• Product image: ${product.images[0]}\n\nPlease confirm availability. Thank you!`,
             )}`}
             target="_blank"
             rel="noopener noreferrer"

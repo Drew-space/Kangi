@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export default function Hero() {
+  const currentYear = new Date().getFullYear();
   return (
     <section className="relative h-[90vh] overflow-hidden">
       <Image
@@ -40,7 +41,8 @@ export default function Hero() {
           SOFIA ATELIER
         </h1>
         <p className="text-white/70 tracking-[0.35em] uppercase text-xs md:text-sm mt-4 fade-up fade-up-delay-2">
-          Autumn / Winter 2025
+          {/* Autumn / Winter 2025 */}The Signature Collection / Exclusive
+          Pieces {currentYear}
         </p>
         <a
           href="#products"

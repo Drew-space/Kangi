@@ -25,16 +25,21 @@ export default function NavbarClient({ links }: { links: NavLink[] }) {
           </span>
           Menu
         </button>
-
         <Link
+          href="/"
+          className="font-display text-base sm:text-lg md:text-2xl tracking-wider md:tracking-widest whitespace-nowrap absolute left-1/2 -translate-x-1/2"
+        >
+          SOFIA ATELIER
+        </Link>
+        {/* <Link
           href="/"
           className="font-display text-2xl tracking-widest absolute left-1/2 -translate-x-1/2"
         >
           SOFIA ATELIER
-        </Link>
+        </Link> */}
 
         <div className="flex items-center gap-4 text-[11px] tracking-widest uppercase font-display">
-          <button>Search</button>
+          {/* <button>Search</button> */}
           <button onClick={openCart}>Bag ({totalCount})</button>
         </div>
       </nav>

@@ -16,7 +16,8 @@ export default function AboutPage() {
       {/* ── HERO ── */}
       <section className="relative h-[85vh] overflow-hidden flex items-end px-6 md:px-16 pb-16">
         <Image
-          src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1600&q=85"
+          src="/images/about.png"
+          // src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1600&q=85"
           alt="About hero"
           fill
           className="object-cover"
@@ -66,15 +67,15 @@ export default function AboutPage() {
           style={{ color: "var(--muted)" }}
         >
           <p>
-            SOFIA ATELIER is a streetwear label rooted in the idea that clothing
-            should last — in construction, in style, and in meaning. We source
-            only from factories that share our obsession with craft. Every
-            fabric is handled, every seam is questioned.
+            SOFIA ATELIER is a house built on permanence — in construction, in
+            silhouette, and in meaning. We work only with ateliers that share
+            our reverence for craft. Every fabric is considered, every seam
+            deliberated.
           </p>
           <p>
-            We believe the most powerful statement is a garment that needs no
-            explanation. No logos for their own sake. No noise. Just material,
-            cut, and intention — executed without compromise.
+            We believe the most powerful statement is a garment that requires no
+            explanation. No branding for its own sake. No excess. Only material,
+            cut, and intention — realized without compromise.
           </p>
         </div>
       </section>

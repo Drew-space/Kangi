@@ -39,10 +39,46 @@ export default async function CategoryPage({
       <AnnouncementBar />
       <Navbar />
 
+      {/* <div
+        className="relative h-[40vh] flex items-end px-6 md:px-12 pb-10 overflow-hidden"
+        style={{ background: "var(--charcoal)" }}
+      >
+        <div className="relative z-10">
+          <p
+            className="font-display text-xs tracking-[0.4em] uppercase mb-2"
+            style={{ color: "var(--stone)" }}
+          >
+            SOFIA ATELIER / {match.name}
+          </p>
+          <h1
+            className="font-display text-6xl md:text-8xl tracking-wide leading-none"
+            style={{ color: "var(--white)" }}
+          >
+            {match.name}
+          </h1>
+        </div>
+      </div> */}
       <div
         className="relative h-[40vh] flex items-end px-6 md:px-12 pb-10 overflow-hidden"
         style={{ background: "var(--charcoal)" }}
       >
+        {match.headerImage && (
+          <div
+            className="absolute inset-0 opacity-60"
+            style={{
+              backgroundImage: `url(${match.headerImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 25%",
+            }}
+          />
+        )}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.6) 100%)",
+          }}
+        />
         <div className="relative z-10">
           <p
             className="font-display text-xs tracking-[0.4em] uppercase mb-2"
