@@ -76,7 +76,7 @@ import { getAllProducts } from "@/sanity/lib/queries";
 
 export default async function ProductsGrid() {
   const products = await getAllProducts();
-  const featured = products.slice(0, 3);
+  const featured = products.slice(1, 3);
 
   return (
     <section id="products" className="px-6 md:px-12 py-20">
